@@ -12,7 +12,7 @@ async function chat() {
   while (true) {
     const userInput = readline.question("You: ");
     
-    // Termiate if type exit
+    // Terminate if type exit
     if (userInput.toLowerCase() === "exit") {
       console.log("Chatbot: See you soon!.");
       break;
