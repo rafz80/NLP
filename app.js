@@ -12,16 +12,16 @@ async function chat() {
   while (true) {
     const userInput = readline.question("You: ");
     
-    // Encerra o loop se o usuário digitar "sair"
+    // Termiate if type exit
     if (userInput.toLowerCase() === "exit") {
       console.log("Chatbot: See you soon!.");
       break;
     }
 
-    // Processa a entrada do usuário
+    // process the user input
     const response = await manager.process("en", userInput);
     
-    // Exibe a resposta do chatbot
+    // shows the response
     console.log("Chatbot:", response.answer || "Sorry, I did not understand your question.");
   }
 }
